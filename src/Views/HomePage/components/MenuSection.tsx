@@ -19,7 +19,7 @@ const menu: Record<string, Array<Food>> = {
 
 const MenuSection = () => {
   return (
-    <section className="flex flex-col mt-10 flex-1 mx-10">
+    <section className="flex flex-col mt-10 flex-1">
       <Title label="Menu" />
       <div className="flex flex-row gap-10 items-stretch flex-wrap">
         {Object.keys(menu).map((key) =>

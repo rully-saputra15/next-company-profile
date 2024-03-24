@@ -1,26 +1,26 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import { FaStar } from "react-icons/fa";
-import { LuChefHat } from "react-icons/lu";
+'use client';
+import React from 'react';
+import Image from 'next/image';
+import { FaStar } from 'react-icons/fa';
+import { LuChefHat } from 'react-icons/lu';
 
-import { Food } from "@/types/menu";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Food } from '@/types/menu';
+import { Skeleton } from '@/components/ui/skeleton';
 
 type Props = Food & {
   imageElIdx: number;
 };
 
 const images = [
-  "",
-  "https://www.recipetineats.com/wp-content/uploads/2023/05/Garlic-cheese-pizza_9.jpg",
-  "https://baconmockup.com/300/200/",
+  '',
+  'https://www.recipetineats.com/wp-content/uploads/2023/05/Garlic-cheese-pizza_9.jpg',
+  'https://baconmockup.com/300/200/',
 ];
 
 const MenuItem = ({ name, price, isRecommended, imageElIdx }: Props) => {
   const [isLoading, setIsLoading] = React.useState(true);
   return (
-    <article className="flex flex-col grow basis-1/5 max-h-64 shadow-xl rounded-xl">
+    <article className="flex flex-col grow basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5 xl:basis-1/5 2xl:basis-1/5 max-h-64 shadow-xl rounded-xl">
       <div className="h-40 relative overflow-hidden">
         {isLoading && <Skeleton className="h-full w-full" />}
         <Image

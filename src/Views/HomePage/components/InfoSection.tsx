@@ -1,22 +1,22 @@
-import { MdAccessTime } from "react-icons/md";
-import { ImLocation } from "react-icons/im";
-import { IoCall } from "react-icons/io5";
+import { MdAccessTime } from 'react-icons/md';
+import { ImLocation } from 'react-icons/im';
+import { IoCall } from 'react-icons/io5';
 
 const data = [
   {
     icon: <MdAccessTime className="text-xl text-neutral-50" />,
-    title: "Mon-Fri 9:00-17:00",
-    description: "Working hours",
+    title: 'Mon-Fri 9:00-17:00',
+    description: 'Working hours',
   },
   {
     icon: <ImLocation className="text-xl text-neutral-50" />,
-    title: "Lorem ipsum street No 28",
-    description: "Our HQ Location",
+    title: 'Lorem ipsum street No 28',
+    description: 'Our HQ Location',
   },
   {
     icon: <IoCall className="text-xl text-neutral-50" />,
-    title: "+62 812 3456 7890",
-    description: "Call Online",
+    title: '+62 812 3456 7890',
+    description: 'Call Online',
   },
 ];
 

@@ -1,10 +1,10 @@
-import Image from "next/image";
-import { FaStar, FaStarHalf } from "react-icons/fa";
+import Image from 'next/image';
+import { FaStar, FaStarHalf } from 'react-icons/fa';
 
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
-import MainImage from "/public/main-image.jpg";
+import MainImage from '/public/main-image.jpg';
 
 const MainSection = () => {
   return (
@@ -12,8 +12,8 @@ const MainSection = () => {
       <nav className="flex flex-row w-full justify-between items-center pb-4 border-b border-slate-200">
         <h1 className="text-2xl">Logo</h1>
         <div className="flex flex-row space-x-5">
-          <a href="/login">Login</a>
-          <a href="/signup">Signup</a>
+          <a href="/login">About</a>
+          <a href="/signup">Contact Us</a>
         </div>
       </nav>
       <article
@@ -33,7 +33,7 @@ const MainSection = () => {
           <div className="flex flex-row items-center gap-8">
             <div className="flex flex-row">
               {new Array(5).fill(null).map((_, index) => (
-                <Avatar key={index} className={`${index !== 0 && "-ml-4"}`}>
+                <Avatar key={index} className={`${index !== 0 && '-ml-4'}`}>
                   <AvatarImage src={`https://i.pravatar.cc/300?img=${index}`} />
                   <AvatarFallback>U</AvatarFallback>
                 </Avatar>
