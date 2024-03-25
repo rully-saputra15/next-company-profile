@@ -1,21 +1,25 @@
 import Image from 'next/image';
 import { FaStar, FaStarHalf } from 'react-icons/fa';
+import { CiPizza } from 'react-icons/ci';
 
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 import MainImage from '/public/main-image.jpg';
 
+const Navbar = () => (
+  <nav className="flex flex-row w-full justify-between items-center mb-10 ">
+    <CiPizza className="text-3xl text-yellow-700" />
+    <div className="flex flex-row space-x-5">
+      <a href="/login">About</a>
+      <a href="/signup">Contact Us</a>
+    </div>
+  </nav>
+);
 const MainSection = () => {
   return (
     <section className="min-h-screen p-5 flex flex-col items-center">
-      <nav className="flex flex-row w-full justify-between items-center pb-4 border-b border-slate-200">
-        <h1 className="text-2xl">Logo</h1>
-        <div className="flex flex-row space-x-5">
-          <a href="/login">About</a>
-          <a href="/signup">Contact Us</a>
-        </div>
-      </nav>
+      <Navbar />
       <article
         className={`flex flex-1 flex-row justify-around items-center relative gap-10 w-full flex-wrap`}
       >

@@ -179,6 +179,33 @@ const customerReviews: Array<CustomerReview> = [
   },
 ];
 
+const CustomerReviewCard = ({
+  name,
+  description,
+  message,
+}: Partial<CustomerReview>) => (
+  <CarouselItem className="sm:basis-full md:basis-1/2 lg:basis-1/3">
+    <div className="p-1">
+      <Card className="h-96 lg:h-72 xl:h-60 2xl:h-60">
+        <CardHeader>
+          <CardTitle className="flex flex-row gap-3 items-center">
+            <Avatar>
+              <AvatarImage src="https://picsum.photos/200/300" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+            <p>{name}</p>
+          </CardTitle>
+
+          <CardDescription>{description}</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-slate-500">{message}</p>
+        </CardContent>
+      </Card>
+    </div>
+  </CarouselItem>
+);
+
 const CustomerReviewSection = () => {
   return (
     <section className="flex flex-col gap-3 mt-5 mb-10 flex-1">
@@ -187,29 +214,12 @@ const CustomerReviewSection = () => {
         <CarouselContent className="-ml-2 md:-ml-4">
           {customerReviews.map((review) => {
             return (
-              <CarouselItem
+              <CustomerReviewCard
                 key={review.id}
-                className="sm:basis-full md:basis-1/2 lg:basis-1/3"
-              >
-                <div className="p-1">
-                  <Card className="h-96 lg:h-72 xl:h-60 2xl:h-60">
-                    <CardHeader>
-                      <CardTitle className="flex flex-row gap-3 items-center">
-                        <Avatar>
-                          <AvatarImage src="https://picsum.photos/200/300" />
-                          <AvatarFallback>CN</AvatarFallback>
-                        </Avatar>
-                        <p>{review.name}</p>
-                      </CardTitle>
-
-                      <CardDescription>{review.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-slate-500">{review.message}</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
+                name={review.name}
+                description={review.description}
+                message={review.message}
+              />
             );
           })}
         </CarouselContent>
